@@ -123,7 +123,6 @@ class CardInfoHome extends StatelessWidget {
 
     return Container(
       margin: EdgeInsets.only(top: 18, left: 16, right: 16),
-      height: 333,
       decoration: BoxDecoration(
         color: whiteColor,
         borderRadius: BorderRadius.circular(15),
