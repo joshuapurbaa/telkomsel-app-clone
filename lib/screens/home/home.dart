@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telkomsel_app/screens/home/components/card_info_home_1.dart';
 import 'package:telkomsel_app/themes.dart';
 
 class HomePage extends StatelessWidget {
@@ -94,6 +95,14 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget cardInfo() {
+      return Column(
+        children: [
+          CardInfoHome(),
+        ],
+      );
+    }
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -107,6 +116,7 @@ class HomePage extends StatelessWidget {
         child: ListView(
           children: [
             header(),
+            cardInfo(),
           ],
         ),
       ),
