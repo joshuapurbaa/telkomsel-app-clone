@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
     CardInfoHome2(),
   ];
 
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     Widget headerContent(String icon, String text) {
@@ -107,7 +108,21 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
+    Widget indicator(int index) {
+      return Container(
+        width: currentIndex == index ? 18 : 5,
+        height: 5,
+        margin: EdgeInsets.symmetric(horizontal: 2),
+        decoration: BoxDecoration(
+            color: currentIndex == index
+                ? whiteColor
+                : whiteColor.withOpacity(0.7),
+            borderRadius: BorderRadius.circular(4)),
+      );
+    }
+
     Widget cardInfo() {
+      int index = -1;
       return Column(
         children: [
           CarouselSlider(
@@ -120,8 +135,24 @@ class _HomePageState extends State<HomePage> {
               viewportFraction: 1,
               height: 333,
               enableInfiniteScroll: false,
+              initialPage: 0,
+              onPageChanged: (index, reason) {
+                setState(() {
+                  currentIndex = index;
+                });
+              },
             ),
           ),
+          SizedBox(
+            height: 30,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: cards.map((e) {
+              index += 1;
+              return indicator(index);
+            }).toList(),
+          )
         ],
       );
     }
