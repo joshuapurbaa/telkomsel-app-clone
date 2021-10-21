@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:telkomsel_app/screens/home/components/card_info_home_1.dart';
 import 'package:telkomsel_app/screens/home/components/card_info_home_2.dart';
+import 'package:telkomsel_app/screens/home/components/recomended_card.dart';
 import 'package:telkomsel_app/themes.dart';
 
 class HomePage extends StatefulWidget {
@@ -157,6 +158,69 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
+    Widget recomendedForYou() {
+      return Column(
+        children: [
+          Container(
+            margin: EdgeInsets.only(left: 16, top: 45, right: 16),
+            child: Row(
+              children: [
+                Text(
+                  'Recommended for you',
+                  style: nunitoExtraBoldText18,
+                ),
+                Spacer(),
+                Text(
+                  'See all',
+                  style: regulerText12.copyWith(
+                    color: blueColor,
+                  ),
+                )
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              children: [
+                RecomendedCard(
+                  title: 'Kuota Ketengan Unli...',
+                  time: '29 Jun 2021 13:08:07',
+                  price: 'Rp 4,200',
+                ),
+                SizedBox(
+                  width: 16,
+                ),
+                RecomendedCard(
+                  title: 'Ketengan Kuota Bela...',
+                  time: '29 Jun 2021 13:05:07',
+                  price: 'Rp 5,500',
+                ),
+              ],
+            ),
+          )
+        ],
+      );
+    }
+
+    Widget content() {
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        decoration: BoxDecoration(
+          color: whiteColor,
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(24),
+          ),
+        ),
+        child: Column(
+          children: [
+            recomendedForYou(),
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
@@ -171,6 +235,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             header(),
             cardInfo(),
+            content(),
           ],
         ),
       ),
