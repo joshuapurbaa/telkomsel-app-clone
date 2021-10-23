@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:telkomsel_app/screens/home/components/card_info_home_1.dart';
 import 'package:telkomsel_app/screens/home/components/card_info_home_2.dart';
 import 'package:telkomsel_app/screens/home/components/recomended_card.dart';
+import 'package:telkomsel_app/screens/home/components/whats_new_card.dart';
 import 'package:telkomsel_app/themes.dart';
 
 class HomePage extends StatefulWidget {
@@ -204,6 +205,42 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
+    Widget whatsNew() {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 16, bottom: 14),
+            child: Text(
+              'What’s new ?',
+              style: nunitoExtraBoldText18,
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
+              children: [
+                WhatsNewCard(
+                  image: 'assets/images/video-subscription.png',
+                  text: 'Package',
+                  title: 'Video Digital Subscription',
+                ),
+                SizedBox(
+                  width: 16,
+                ),
+                WhatsNewCard(
+                  image: 'assets/images/poin-image.png',
+                  text: 'Poin',
+                  title: 'Undi-undi Hepi',
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+
     Widget content() {
       return Container(
         margin: EdgeInsets.only(top: 20),
@@ -216,6 +253,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             recomendedForYou(),
+            whatsNew(),
           ],
         ),
       );
@@ -231,14 +269,25 @@ class _HomePageState extends State<HomePage> {
             colors: [redColor, redColor, yellowColor],
           ),
         ),
-        child: ListView(
-          children: [
-            header(),
-            cardInfo(),
-            content(),
-          ],
+        child: ScrollConfiguration(
+          behavior: MyBehaviour(),
+          child: ListView(
+            children: [
+              header(),
+              cardInfo(),
+              content(),
+            ],
+          ),
         ),
       ),
     );
+  }
+}
+
+class MyBehaviour extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }
