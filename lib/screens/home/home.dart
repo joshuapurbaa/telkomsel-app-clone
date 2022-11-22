@@ -10,13 +10,13 @@ class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   List cards = [
-    CardInfoHome(),
-    CardInfoHome2(),
+    const CardInfoHome(),
+    const CardInfoHome2(),
   ];
 
   int currentIndex = 0;
@@ -24,11 +24,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Widget headerContent(String icon, String text) {
       return Container(
-        margin: EdgeInsets.only(top: 15, right: 10),
-        padding: EdgeInsets.fromLTRB(8, 5, 2, 5),
+        margin: const EdgeInsets.only(top: 15, right: 10),
+        padding: const EdgeInsets.fromLTRB(8, 5, 2, 5),
         decoration: BoxDecoration(
           color: darkRedColor,
-          borderRadius: BorderRadius.all(
+          borderRadius: const BorderRadius.all(
             Radius.circular(10),
           ),
         ),
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
               icon,
               width: 10,
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Text(
@@ -56,7 +56,7 @@ class _HomePageState extends State<HomePage> {
 
     Widget header() {
       return Container(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           children: [
             Row(
@@ -66,25 +66,25 @@ class _HomePageState extends State<HomePage> {
                   'Hi James',
                   style: boldText15.copyWith(color: whiteColor),
                 ),
-                Spacer(),
+                const Spacer(),
                 Icon(
                   Icons.qr_code_rounded,
                   color: whiteColor,
                   size: 28,
                 ),
-                SizedBox(width: 12),
+                const SizedBox(width: 12),
                 Image.asset(
                   'assets/icons/icon-email.png',
                   width: 32,
                 ),
-                SizedBox(width: 12),
+                const SizedBox(width: 12),
                 Image.asset(
                   'assets/icons/icon-help.png',
                   width: 25,
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 3,
             ),
             Row(
@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                   '082212345678',
                   style: boldText15.copyWith(color: whiteColor),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 7,
                 ),
                 Image.asset('assets/icons/icon-add.png', width: 14),
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
       return Container(
         width: currentIndex == index ? 18 : 5,
         height: 5,
-        margin: EdgeInsets.symmetric(horizontal: 2),
+        margin: const EdgeInsets.symmetric(horizontal: 2),
         decoration: BoxDecoration(
             color: currentIndex == index
                 ? whiteColor
@@ -145,7 +145,7 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
@@ -163,14 +163,14 @@ class _HomePageState extends State<HomePage> {
       return Column(
         children: [
           Container(
-            margin: EdgeInsets.only(left: 16, top: 45, right: 16),
+            margin: const EdgeInsets.only(left: 16, top: 45, right: 16),
             child: Row(
               children: [
                 Text(
                   'Recommended for you',
                   style: nunitoExtraBoldText18,
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
                   'See all',
                   style: regulerText12.copyWith(
@@ -182,9 +182,9 @@ class _HomePageState extends State<HomePage> {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Row(
-              children: [
+              children: const [
                 RecomendedCard(
                   title: 'Kuota Ketengan Unli...',
                   time: '29 Jun 2021 13:08:07',
@@ -218,9 +218,9 @@ class _HomePageState extends State<HomePage> {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Row(
-              children: [
+              children: const [
                 WhatsNewCard(
                   image: 'assets/images/video-subscription.png',
                   text: 'Package',
@@ -243,10 +243,10 @@ class _HomePageState extends State<HomePage> {
 
     Widget content() {
       return Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: const EdgeInsets.only(top: 20),
         decoration: BoxDecoration(
           color: whiteColor,
-          borderRadius: BorderRadius.vertical(
+          borderRadius: const BorderRadius.vertical(
             top: Radius.circular(24),
           ),
         ),
@@ -265,7 +265,7 @@ class _HomePageState extends State<HomePage> {
           gradient: LinearGradient(
             begin: Alignment.centerLeft,
             end: Alignment.topRight,
-            stops: [0.1, 0.8, 1],
+            stops: const [0.1, 0.8, 1],
             colors: [redColor, redColor, yellowColor],
           ),
         ),

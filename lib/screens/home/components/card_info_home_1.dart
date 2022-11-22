@@ -26,7 +26,7 @@ class CardInfoHome extends StatelessWidget {
             flex: 1,
             child: circularPercent(0.9),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Expanded(
@@ -40,7 +40,7 @@ class CardInfoHome extends StatelessWidget {
                       'Multimedia',
                       style: boldText13.copyWith(color: primaryTextColor),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       '9.2GB ',
                       style: semiBoldText13.copyWith(color: primaryTextColor),
@@ -61,7 +61,7 @@ class CardInfoHome extends StatelessWidget {
                       'assets/icons/icon-warning.png',
                       width: 13,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Text(
@@ -85,7 +85,7 @@ class CardInfoHome extends StatelessWidget {
             flex: 1,
             child: circularPercent(0),
           ),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Expanded(
@@ -99,7 +99,7 @@ class CardInfoHome extends StatelessWidget {
                       'Internet',
                       style: boldText13.copyWith(color: primaryTextColor),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       'Not yet purchased',
                       style: mediumText13.copyWith(color: primaryTextColor),
@@ -122,7 +122,7 @@ class CardInfoHome extends StatelessWidget {
     }
 
     return Container(
-      margin: EdgeInsets.only(top: 18, left: 16, right: 16),
+      margin: const EdgeInsets.only(top: 18, left: 16, right: 16),
       decoration: BoxDecoration(
         color: whiteColor,
         borderRadius: BorderRadius.circular(15),
@@ -134,7 +134,7 @@ class CardInfoHome extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 color: greyCardColor,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(15),
                   topRight: Radius.circular(15),
                 ),
@@ -152,12 +152,12 @@ class CardInfoHome extends StatelessWidget {
                       'Active until 22 Sep 2021',
                       style: mediumText12.copyWith(color: darkGreyColor),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Row(
                       children: [
                         Container(
                           padding:
-                              EdgeInsets.symmetric(vertical: 7, horizontal: 19),
+                              const EdgeInsets.symmetric(vertical: 7, horizontal: 19),
                           decoration: BoxDecoration(
                             color: redButtonColor,
                             borderRadius: BorderRadius.circular(16.5),
@@ -167,14 +167,14 @@ class CardInfoHome extends StatelessWidget {
                             style: mediumText12.copyWith(color: whiteColor),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 18,
                         ),
                         Text(
                           'Top Up',
                           style: mediumText12.copyWith(color: blueColor),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 19,
                         ),
                         Text(
@@ -194,7 +194,7 @@ class CardInfoHome extends StatelessWidget {
               child: Column(
                 children: [
                   infoCardList_1(),
-                  Spacer(),
+                  const Spacer(),
                   infoCardList_2(),
                 ],
               ),

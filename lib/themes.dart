@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Color redColor = Color(0xFFDF181D);
-Color greyColor = Color(0xFFB4B8BB);
-Color yellowColor = Color(0xFFEDD501);
-Color whiteColor = Color(0xFFFFFFFF);
-Color darkRedColor = Color(0xFFBA0024);
-Color greyCardColor = Color(0xFFF5F4F2);
-Color primaryTextColor = Color(0xFF011C40);
-Color darkGreyColor = Color(0xFF535760);
-Color redButtonColor = Color(0xFFF00027);
-Color blueColor = Color(0xFF124888);
-Color orangColor = Color(0xFFFAA424);
-Color lightGreyColor = Color(0xFFEDECF1);
-Color brownColor = Color(0xFFB54618);
-Color bluePurpleColor = Color(0xFF1D13E5);
-Color pinkColor = Color(0xFFFEE5E7);
-Color blackColor = Color(0xFF000000);
+Color redColor = const Color(0xFFDF181D);
+Color greyColor = const Color(0xFFB4B8BB);
+Color yellowColor = const Color(0xFFEDD501);
+Color whiteColor = const Color(0xFFFFFFFF);
+Color darkRedColor = const Color(0xFFBA0024);
+Color greyCardColor = const Color(0xFFF5F4F2);
+Color primaryTextColor = const Color(0xFF011C40);
+Color darkGreyColor = const Color(0xFF535760);
+Color redButtonColor = const Color(0xFFF00027);
+Color blueColor = const Color(0xFF124888);
+Color orangColor = const Color(0xFFFAA424);
+Color lightGreyColor = const Color(0xFFEDECF1);
+Color brownColor = const Color(0xFFB54618);
+Color bluePurpleColor = const Color(0xFF1D13E5);
+Color pinkColor = const Color(0xFFFEE5E7);
+Color blackColor = const Color(0xFF000000);
 
 TextStyle bottomNavText =
     GoogleFonts.poppins(color: greyColor, fontSize: 12, fontWeight: bold);

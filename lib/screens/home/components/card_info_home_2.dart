@@ -34,7 +34,7 @@ class CardInfoHome2 extends StatelessWidget {
                         iconHelp,
                         size: 19,
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
                         text,
                         style: regulerText13.copyWith(color: primaryTextColor),
@@ -58,8 +58,8 @@ class CardInfoHome2 extends StatelessWidget {
     }
 
     return Container(
-      margin: EdgeInsets.only(top: 18, left: 16, right: 16),
-      padding: EdgeInsets.only(left: 17, top: 29, right: 17),
+      margin: const EdgeInsets.only(top: 18, left: 16, right: 16),
+      padding: const EdgeInsets.only(left: 17, top: 29, right: 17),
       decoration: BoxDecoration(
         color: whiteColor,
         borderRadius: BorderRadius.circular(15),
@@ -68,12 +68,12 @@ class CardInfoHome2 extends StatelessWidget {
         children: [
           listCardInfo('assets/icons/icon-phone.png', 'Voice', null,
               'You have no quota', 'Not yet purchased'),
-          SizedBox(
+          const SizedBox(
             height: 39,
           ),
           listCardInfo('assets/icons/icon-sms.png', 'SMS', null,
               'You have no quota', 'Not yet purchased'),
-          SizedBox(
+          const SizedBox(
             height: 39,
           ),
           listCardInfo(

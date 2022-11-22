@@ -10,18 +10,18 @@ class BottomNavBar extends StatefulWidget {
   const BottomNavBar({Key? key}) : super(key: key);
 
   @override
-  _BottomNavBarState createState() => _BottomNavBarState();
+  State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
 
   final _screens = [
-    HomePage(),
-    PoinPage(),
-    ShopPage(),
-    ExplorePage(),
-    MenuPage(),
+    const HomePage(),
+    const PoinPage(),
+    const ShopPage(),
+    const ExplorePage(),
+    const MenuPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         items: [
           BottomNavigationBarItem(
             icon: Container(
-              margin: EdgeInsets.symmetric(vertical: 5),
+              margin: const EdgeInsets.symmetric(vertical: 5),
               child: Image.asset(
                 'assets/icons/Icon-home.png',
                 width: 21,
@@ -46,7 +46,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Container(
-              margin: EdgeInsets.symmetric(vertical: 5),
+              margin: const EdgeInsets.symmetric(vertical: 5),
               child: Image.asset(
                 'assets/icons/icon-trophy.png',
                 width: 24,
@@ -57,7 +57,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Container(
-              margin: EdgeInsets.symmetric(vertical: 5),
+              margin: const EdgeInsets.symmetric(vertical: 5),
               child: Image.asset(
                 'assets/icons/icon-shop-cart.png',
                 width: 25,
@@ -68,7 +68,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Container(
-              margin: EdgeInsets.symmetric(vertical: 5),
+              margin: const EdgeInsets.symmetric(vertical: 5),
               child: Image.asset(
                 'assets/icons/icon-explore.png',
                 width: 27,
@@ -79,7 +79,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ),
           BottomNavigationBarItem(
             icon: Container(
-              margin: EdgeInsets.symmetric(vertical: 10),
+              margin: const EdgeInsets.symmetric(vertical: 10),
               child: Image.asset(
                 'assets/icons/icon-menu.png',
                 width: 20,

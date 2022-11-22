@@ -16,18 +16,18 @@ class RecomendedCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 20, bottom: 28),
+      margin: const EdgeInsets.only(top: 20, bottom: 28),
       height: 131,
       width: 284,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.vertical(
+          borderRadius: const BorderRadius.vertical(
             top: Radius.circular(14),
           ),
           color: whiteColor,
           boxShadow: [
             BoxShadow(
               color: greyColor,
-              offset: Offset(0, 1),
+              offset: const Offset(0, 1),
               blurRadius: 1,
             )
           ]),
@@ -36,12 +36,12 @@ class RecomendedCard extends StatelessWidget {
           ClipPath(
             clipper: BackgroundClipper(),
             child: Container(
-              padding: EdgeInsets.only(left: 11, top: 2),
+              padding: const EdgeInsets.only(left: 11, top: 2),
               height: 18,
               width: 90,
               decoration: BoxDecoration(
                 color: bluePurpleColor,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(14),
                 ),
               ),
@@ -67,7 +67,7 @@ class RecomendedCard extends StatelessWidget {
                     letterSpacing: 0.3,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8,
                 ),
                 Text(
@@ -76,7 +76,7 @@ class RecomendedCard extends StatelessWidget {
                     color: primaryTextColor,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Text(

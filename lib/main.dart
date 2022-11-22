@@ -4,7 +4,7 @@ import 'package:telkomsel_app/screens/bottom_nav_bar.dart';
 import 'package:telkomsel_app/themes.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+        const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       title: 'Telkomsel App Clone',
       debugShowCheckedModeBanner: false,
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           selectedItemColor: redColor,
         ),
       ),
-      home: BottomNavBar(),
+      home: const BottomNavBar(),
     );
   }
 }

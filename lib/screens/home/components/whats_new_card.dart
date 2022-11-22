@@ -23,11 +23,11 @@ class WhatsNewCard extends StatelessWidget {
           width: 281,
           height: 164,
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           decoration: BoxDecoration(
             color: pinkColor,
             borderRadius: BorderRadius.circular(19),
@@ -37,7 +37,7 @@ class WhatsNewCard extends StatelessWidget {
             style: regulerText10.copyWith(color: blackColor),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Text(
